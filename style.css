@@ -1,0 +1,656 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.sidebar{
+    width:300px;
+    background-color:black;
+    position:fixed;
+    top:0;
+    left:0;
+    bottom: 0;
+    padding:10px
+}
+.sidebar-nav{
+    background-color: #111111;
+    border-radius :10px;
+    padding:20px 10px;
+    margin-bottom:10px;
+}
+.sidebar-nav .logo{
+   width: 120px;
+}
+.sidebar-nav .logo img{
+    width:100%;
+}
+.sidebar-nav ul{
+    list-style: none;
+
+}
+.sidebar-nav ul li{
+    padding:10px 20px;
+}
+.sidebar-nav ul li a:hover{
+ 
+    color:white;
+}
+.sidebar-nav ul li a{
+    text-decoration: none;
+    color:#b3b3b3;
+    font-size: 16px;
+    font-weight: 600 ;
+}
+.sidebar-nav ul li a i{
+    font-size: 20px;
+    margin-right:10px;
+}
+.library::after{
+    content:'+';
+    float:right;
+    text-align: center;
+    border-radius:50%;
+    font-size:15px;
+}
+.create-playlist{
+    background-color: #302f2f;
+    padding:30px 15px;
+    border-radius:10px;
+    margin-bottom: 10px;
+}
+.sidebar-scroll{
+    height:120px;
+    overflow-y:auto;
+}
+.sidebar-scroll::-webkit-scrollbar{
+    background:transparent;
+}
+.sidebar-scroll::-webkit-scrollbar-thumb{
+    background:transparent;
+    width: 10px;
+}
+.sidebar-scroll:hover::-webkit-scrollbar-thumb{
+    background-color: #5c5b5b;
+    width:5px;
+}
+
+.create-playlist h4{
+    color: #fff;
+    font-size:15px;
+}
+.create-playlist p{
+    color: #fff;
+    font-size:12px;
+    margin:12px 0;
+}
+.create-playlist button{
+    padding: 8px 15px;
+    border:0;
+    outline: 0;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-bottom:10px;
+}
+
+.privacy ul li a{
+    text-decoration: none;
+    color: #818080;
+    font-size: 11px;
+    font-weight:600;
+    margin: 0 6px;
+}
+.privacy ul li a:hover{
+    text-decoration:underline;
+    color:#bebcbc;
+}
+.privacy ul{
+    list-style: none; 
+    margin-top:20px;
+}
+.privacy ul li{
+    padding: 0 12px;
+    padding-bottom:8px;
+}
+.eng-btn{
+    padding:20px 30px;
+}
+.eng-btn button{
+    padding:10px 30px;
+    background:transparent;
+    border:0;
+    outline: none;
+    color:#ffffff;
+    border: 1px solid #818080;
+    border-radius:20px;
+    margin:20px 0;
+}
+.eng-btn button:hover{
+    padding:11px 31px;
+    border: 1px solid #fff;
+}
+.main-section{
+   margin-left:300px;
+   background-color: #181818; 
+   height:100vh;
+   overflow: auto;
+   margin-top: 15px;
+   margin-right:10px;
+   border-radius: 10px;
+}
+
+.main-section .top-nav{
+   padding:20px 30px;
+    background-color: #181818;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding-top: 60px;
+}
+.main-section .top-nav button {
+ background: transparent;
+ border:0;
+ outline:0;
+ 
+}
+.main-section .top-nav .prev-btn button i{
+   color:#838181;
+   font-size:22px;
+   margin-right:20px;
+   cursor:pointer;
+   border-radius:100%;
+   padding:0 5px;
+   background-color: #111;
+   }
+    .top-nav .login-btn .sign-up{
+        color:#242323;
+        font-size:14px;
+        font-weight:600;
+        background:#fff;
+        padding:8px 15px;
+        border-radius:20px;
+   }
+   .top-nav .login-btn .bell{
+    color:#fff;
+    background:#111111;
+    padding:13px 13px;
+    border-radius:100px;
+}
+.top-nav .login-btn .user{
+    color:#111111;
+    background:#fff;
+    padding:11px 11px;
+    border-radius:100px;
+}
+   .top-nav .login-btn .sign-up:hover{
+    padding: 10px 20px;
+    cursor:pointer;
+   
+   }
+   .top-nav .login-btn .login {
+    color:#fff;
+    font-size:14px;
+    font-weight:600;
+    background:#111111;
+    padding:10px 15px;
+    border-radius:20px;
+   }
+   .top-nav .login-btn .login:hover {
+    padding: 10px 20px;
+    cursor:pointer;
+    }
+   .top-nav .login-btn .bell:hover {
+    padding: 10px 20px;
+    cursor:pointer;
+    
+   }
+   .top-nav .login-btn .user:hover {
+    padding: 10px 20px;
+    cursor:pointer;
+    
+   }
+   .spotify-playlist{
+    padding: 20px 10px;
+   }
+   .spotify-playlist h2{
+    color:#fff;
+    font-size:22px;
+    margin-bottom:20px;
+   }
+   .spotify-playlist .card{
+    display:flex;
+    gap:5px;
+    overflow: hidden;
+   }
+   .spotify-playlist .card .item{
+    width:300px;
+    min-width:200px;
+    background-color:transparent;
+    cursor:pointer;
+    border-radius:6px;
+    padding: 10px;
+    
+   }
+   .spotify-playlist .card .item1{
+    width:300px;
+    min-width:173px;
+    background-color:transparent;
+    cursor:pointer;
+    border-radius:6px;
+    padding: 10px;
+    
+   }
+   .spotify-playlist .card .item:hover{
+  background-color: #3d3c3c;
+    
+   }
+   .spotify-playlist .card .item1:hover{
+    background-color: #3d3c3c;
+      
+     }
+   .spotify-playlist .card .item img{
+    width:100%;
+    border-radius: 6px;
+    margin-bottom:10px;
+   }
+   .spotify-playlist .card .item1 img{
+    width:100%;
+    border-radius: 100px;
+    margin-bottom:10px;
+   }
+
+   .spotify-playlist .item h4{
+    color:#fff;
+   }
+   .spotify-playlist .item p{
+    color:#858e8e;
+    font-size:13px;
+    margin-top:10px;
+   }
+   .spotify-playlist .item1 h4{
+    color:#fff;
+   }
+   .spotify-playlist .item1 p{
+    color:#858e8e;
+    font-size:13px;
+    margin-top:10px;
+   }
+   .spotify-playlist .item p:hover{
+   text-decoration: underline;
+   }
+   .spotify-playlist .item1 p:hover{
+    text-decoration: underline;
+    }
+   .spotify-playlist .play-btn{
+    position:relative;
+   }
+   .spotify-playlist .play-btn i{
+    position:absolute;
+    background-color: #1db954;
+    border-radius:100%;
+    padding:15px;
+    size: 100%;
+    right:8px;
+    top:-40px;
+    opacity:0 ;
+    transform:0.3s ease all;
+   }
+   .spotify-playlist .card .item:hover .play-btn i{
+     opacity:1;
+     transform: translateY(-20px);
+     color: #181818;
+   }
+   .spotify-playlist .card .item1:hover .play-btn i{
+    opacity:1;
+    transform: translateY(-20px);
+  }
+  .top-btn{
+    padding-left: 20px;
+    padding-top: 5px;
+    margin-bottom: 20px;
+  }
+   .top-btn .all{
+    color:#242323;
+        font-size:13px;
+        font-weight:600;
+        background:#fff;
+        padding:7px 7px;
+        border-radius:15px;
+        padding-right: 13px;
+        padding-left: 13px;
+        border: 0;
+  }
+   .top-btn .all:hover{
+    cursor:pointer;
+   
+   }
+   .top-btn .music {
+        color:#fff;
+        font-size:13px;
+        font-weight:600;
+        background-color: #4f4b4b;
+        padding:7px 7px;
+        padding-left: 10px;
+        padding-right: 10px;
+       border: 0;
+       border-radius:20px;
+  }
+   .top-btn .music:hover{
+    cursor:pointer;
+   
+   }
+   .top-btn .podcast {
+    color:#fff;
+    font-size:13px;
+    font-weight:600;
+    background-color: #4f4b4b;
+    padding:7px 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+   border: 0;
+   border-radius:20px;
+}
+
+
+.playlist-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 90%;
+    max-width: 1200px;
+    margin-left:10px;
+    margin-right: 10px;
+}
+
+.playlist-item {
+    display: flex;
+    align-items:center;
+    background-color: #282828;
+    padding: 3px;
+    border-radius: 8px;
+    text-align: left;
+    border-top:5px;
+}
+.playlist-item:hover {
+    cursor:pointer;
+}
+
+.playlist-item img {
+    width: 55px;
+    height: 55px;
+    margin-right: 10px;
+    border-radius: 4px;
+margin-top: 0;
+}
+
+.playlist-item p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    font-weight: bold;
+    flex-grow: 1;
+}
+body {
+    background-color: #191414;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+.footer-section{
+    padding:20px 40px;
+}
+.footer-section .footer{
+    display: flex;
+     justify-content: space-between;
+     margin-top:20px
+}
+.footer-section .footer .footer-links{
+    display: flex;
+     justify-content: space-between;
+    gap:50px;
+}
+.footer-section .footer .footer-links .footer-column{
+    margin:0 12px;
+}
+.footer-section .footer .footer-links div{
+    color:#fff;
+    font-weight:600;
+    margin-bottom: 12px;
+    font-size:16px;
+}
+.footer-section .footer .footer-links ul li{
+    list-style: none;
+    margin: 6px 0;
+
+}
+.footer-section .footer .footer-links ul li a{
+   text-decoration: none;
+   color:#969393;
+   font-size:14px;
+   cursor:pointer;
+
+}
+.footer-section .footer .footer-links ul li a:hover{
+    text-decoration:underline;
+    color:#fff;
+   
+} 
+.footer .social-link i{
+    color:#fff;
+    background:#353434 ;
+    padding:12px;
+    border-radius:50%;
+    margin : 0 5px;
+    cursor:pointer;
+}
+.footer .social-link i:hover{
+background-color:#636262 ;
+}
+hr{
+    margin:20px 40px;
+    border:0;
+    outline:0;
+    border:1px solid #575656;
+    margin-top:40px;
+}
+.copyright{
+    padding:0 40px;
+    color:#969393;
+    font-size:15px;
+    margin-bottom:30px;
+    padding-bottom: 100px;
+    padding-top: 20px;
+    text-align: right;
+}
+@import url(//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
+
+* {
+    box-sizing: border-box;
+    font-family: "circular std book", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    font-size: 14px;
+    padding-bottom: 5rem; /* Add padding at the bottom to ensure content is not hidden behind the player */
+}
+
+.music-player {
+    --primary-color: #ddd;
+    --secondary-color: #999;
+    --green-color: #2d5;
+    --padding: 1em;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 7rem;
+    padding: var(--padding);
+    color: var(--primary-color);
+    z-index: 1000; /* Ensure the player is on top of other elements */
+}
+
+i {
+    color: var(--secondary-color);
+}
+i:hover {
+    color: var(--primary-color);
+}
+
+.song-bar {
+    position: absolute;
+    left: var(--padding);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    width: 25%;
+}
+
+.song-infos {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.image-container {
+    --size: 4.5em;
+    flex-shrink: 0;
+    width: var(--size);
+    height: var(--size);
+}
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.song-description p {
+    margin: 0.2em;
+}
+.title,
+.artist {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+   
+    overflow: hidden;
+}
+.title:hover,
+.artist:hover {
+    text-decoration: underline;
+}
+.artist {
+    color: var(--secondary-color);
+}
+
+.icons {
+    display: flex;
+    gap: 1em;
+}
+
+.progress-controller {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    color: var(--secondary-color);
+}
+
+.control-buttons {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    cursor:pointer;
+}
+
+.play-pause {
+    display: inline-block;
+    padding: 1em;
+    background-color: var(--primary-color);
+    color: #111;
+    border-radius: 50%;
+    cursor:pointer;
+}
+.play-pause:hover {
+    transform: scale(1.1);
+    color: #111;
+}
+
+.progress-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+
+}
+
+.progress-bar {
+    height: 4px;
+    border-radius: 10px;
+    width: 30%;
+    background-color: #ccc4;
+    cursor:pointer;
+}
+
+.progress {
+    position: relative;
+    height: 100%;
+    width: 30%;
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+}
+
+.progress-bar:hover .progress {
+    background-color: var(--green-color);
+}
+
+.progress-bar:hover .progress::after {
+    content: "";
+    position: absolute;
+    --size: 1em;
+    width: var(--size);
+    height: var(--size);
+    right: 0;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    transform: translate(50%, calc(2px - 50%));
+}
+
+.other-features {
+    position: absolute;
+    right: var(--padding);
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.volume-bar {
+    display: flex;
+    align-items: center;
+    gap: .7em;
+}
+
+.volume-bar .progress-bar {
+    width: 6em;
+}
+
+.volume-bar .progress-bar:hover .progress::after {
+    --size: .8em;
+}
